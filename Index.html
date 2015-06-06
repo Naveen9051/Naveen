@@ -8,7 +8,15 @@
 
 
 </style>
+<script type="text/javascript">
+var image1=new Image()
+image1.src="Images/IMG_0147.JPG"
+var image2=new Image()
+image2.src="Images/IMG_0146.JPG"
+var image3=new Image()
+image3.src="Images/IMG_0148.JPG"
 
+</script>
 
 </head>
 <body>
@@ -24,8 +32,24 @@
 		
 		
 	<div class="btn">
+
 	
-<button id="close-image"><img src="images/passfail.png"></button>
+<button id="close-image"><img src="Images/IMG_0147" name="slide" width="110" height="110"></button>
+
+<script type="text/javascript">
+
+var step=1
+function move(){
+document.images.slide.src=eval("image"+step+".src")
+if(step<3)
+step++
+else
+step=1
+setTimeout("move()",1500)
+}
+move()
+
+</script>
 
 </div>
 <div style="margin-left:150px;">
